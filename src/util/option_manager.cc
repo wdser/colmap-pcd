@@ -486,6 +486,7 @@ void OptionManager::AddMapperOptions() {
                               &mapper->first_image_fixed_frames);
   AddAndRegisterDefaultOption("Mapper.if_add_lidar_constraint",
                               &mapper->if_add_lidar_constraint);
+  // lidar pcd path
   AddAndRegisterDefaultOption("Mapper.lidar_pointcloud_path",
                               &mapper->lidar_pointcloud_path);  
   AddAndRegisterDefaultOption("Mapper.if_import_pose_prior",

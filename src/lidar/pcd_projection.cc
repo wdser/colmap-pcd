@@ -171,14 +171,19 @@ void PcdProj::BuildSubMap(const MapType& ptr){
         global_map_min_z_ = std::min(global_map_min_z_, pt.z);
         global_map_max_z_ = std::max(global_map_max_z_, pt.z);
 
+        // 差不多就是voxelize
         auto key = GetKeyType(pt);
         auto iter = submap_.find(key);
+        // std::map<KeyType,NodeType,compare>
+        // KeyType Eigen::Matrix<int,3,1>;
+        // NodeType std::vector<Point>
         if (iter == submap_.end()){
             NodeType node;
             node.push_back(pt);
             submap_.insert({key,node});
             submap_num_ +=1;
         } else {
+            // node
             iter->second.push_back(pt);
         }
     }

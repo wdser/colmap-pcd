@@ -204,6 +204,7 @@ int RunMapper(int argc, char** argv) {
 
   if (!image_list_path.empty()) {
     const auto image_names = ReadTextFileLines(image_list_path);
+    // std::unordered_set<std::string>
     options.mapper->image_names =
         std::unordered_set<std::string>(image_names.begin(), image_names.end());
   }

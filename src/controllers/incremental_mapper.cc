@@ -452,6 +452,7 @@ int IncrementalMapperController::OriginImagesNum() {
   return num;
 }
 
+// Reconstruct
 void IncrementalMapperController::Reconstruct(
     const IncrementalMapper::Options& init_mapper_options) {
   const bool kDiscardReconstruction = true;

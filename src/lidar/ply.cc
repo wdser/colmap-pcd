@@ -37,6 +37,7 @@ LidarPointcloudPtr PointCloudProcess::PointCloudDirectionTrans(const LidarPointc
 
     for (int i = 0; i < pt_num; i++){
         LidarPoint point_added;
+        // -y -> x; -z -> y; x->z
         point_added.x = - ptr->points[i].y;
         point_added.y = - ptr->points[i].z;
         point_added.z = ptr->points[i].x;

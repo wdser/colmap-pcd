@@ -58,6 +58,7 @@ ImageReader::ImageReader(const ImageReaderOptions& options, Database* database)
       EnsureTrailingSlash(StringReplace(options_.mask_path, "\\", "/"));
 
   // Get a list of all files in the image path, sorted by image name.
+  // load images
   if (options_.image_list.empty()) {
     options_.image_list = GetRecursiveFileList(options_.image_path);
     std::sort(options_.image_list.begin(), options_.image_list.end());

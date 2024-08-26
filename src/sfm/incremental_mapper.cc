@@ -357,6 +357,8 @@ bool IncrementalMapper::RegisterInitialImagePair(const Options& options,
 
   return true;
 }
+
+// RegisterInitialImagePairByDepthProj
 bool IncrementalMapper::RegisterInitialImagePairByDepthProj(const Options& options,
                                                             const image_t image_id1,
                                                             const image_t image_id2){

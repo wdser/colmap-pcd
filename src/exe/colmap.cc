@@ -110,6 +110,7 @@ int main(int argc, char** argv) {
   commands.emplace_back("exhaustive_matcher", &RunExhaustiveMatcher);
   commands.emplace_back("feature_extractor", &RunFeatureExtractor);//第一步特征提取
   commands.emplace_back("feature_importer", &RunFeatureImporter);
+  // RunHierarchicalMapper
   commands.emplace_back("hierarchical_mapper", &RunHierarchicalMapper);
   commands.emplace_back("image_deleter", &RunImageDeleter);
   commands.emplace_back("image_filterer", &RunImageFilterer);
@@ -118,6 +119,7 @@ int main(int argc, char** argv) {
   commands.emplace_back("image_undistorter", &RunImageUndistorter);
   commands.emplace_back("image_undistorter_standalone",
                         &RunImageUndistorterStandalone);
+  // RunMapper
   commands.emplace_back("mapper", &RunMapper);
   commands.emplace_back("matches_importer", &RunMatchesImporter);
   commands.emplace_back("model_aligner", &RunModelAligner);
